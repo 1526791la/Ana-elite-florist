@@ -35,18 +35,25 @@
             
             <div class="flex items-center gap-8">
                 <div class="flex gap-8 text-sm uppercase tracking-widest">
-                    <a href="#story" class="hover:text-emerald-400 transition">The Atelier</a>
-                    <a href="#creations" class="hover:text-emerald-400 transition">Creations</a>
-                    <a href="#philosophy" class="hover:text-emerald-400 transition">Philosophy</a>
-                    <a href="#commission" class="hover:text-emerald-400 transition">Commission</a>
+                    <a href="#story" class="hover:text-emerald-400 transition lang-en">The Atelier</a>
+                    <a href="#story" class="hover:text-emerald-400 transition lang-es hidden">El Atelier</a>
+                    
+                    <a href="#creations" class="hover:text-emerald-400 transition lang-en">Creations</a>
+                    <a href="#creations" class="hover:text-emerald-400 transition lang-es hidden">Creaciones</a>
+                    
+                    <a href="#philosophy" class="hover:text-emerald-400 transition lang-en">Philosophy</a>
+                    <a href="#philosophy" class="hover:text-emerald-400 transition lang-es hidden">Filosofía</a>
+                    
+                    <a href="#commission" class="hover:text-emerald-400 transition lang-en">Commission</a>
+                    <a href="#commission" class="hover:text-emerald-400 transition lang-es hidden">Comisión</a>
                 </div>
 
                 <!-- Language Toggle -->
-                <div class="flex items-center bg-zinc-900 rounded-full p-1 text-sm">
+                <div class="flex items-center bg-zinc-900 rounded-full p-1 text-sm font-medium">
                     <button onclick="switchLanguage('en')" id="btn-en"
-                            class="lang-btn active px-4 py-1.5 rounded-full">EN</button>
+                            class="lang-btn active px-5 py-2 rounded-full">EN</button>
                     <button onclick="switchLanguage('es')" id="btn-es"
-                            class="lang-btn px-4 py-1.5 rounded-full">ES</button>
+                            class="lang-btn px-5 py-2 rounded-full">ES</button>
                 </div>
             </div>
         </div>
@@ -79,7 +86,7 @@
         </div>
     </section>
 
-    <!-- STORY -->
+    <!-- STORY / EL ATELIER -->
     <section id="story" class="py-28 bg-zinc-900">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -98,17 +105,108 @@
         </div>
     </section>
 
-    <!-- CREATIONS, PHILOSOPHY, COMMISSION, FOOTER remain in English for now (can be expanded) -->
-    <!-- ... (same as previous version) ... -->
+    <!-- CREATIONS -->
+    <section id="creations" class="py-28 bg-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="creations-title" class="heading text-6xl">Signature Creations</h2>
+                <p id="creations-subtitle" class="text-emerald-400 text-xl mt-3">One-of-a-kind. Never repeated.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition duration-700">
+                    <div class="h-80 bg-zinc-800">
+                        <img src="https://picsum.photos/id/201/600/400" class="w-full h-full object-cover group-hover:scale-110 transition">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="heading text-2xl mb-2 lang-en">Obsidian Veil</h3>
+                        <h3 class="heading text-2xl mb-2 lang-es hidden">Velo de Obsidiana</h3>
+                        <p class="text-emerald-400 mb-4">$4,800 – $12,000</p>
+                        <p id="obsidian-desc" class="text-white/70 text-sm lang-en">Black calla lilies, deep burgundy orchids, sculptural foliage and rare vines. Dramatic and architectural.</p>
+                        <p class="text-white/70 text-sm lang-es hidden">Lirios calla negros, orquídeas burdeos profundas, follaje escultórico y vides raras. Dramático y arquitectónico.</p>
+                    </div>
+                </div>
+
+                <div class="group bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition duration-700">
+                    <div class="h-80 bg-zinc-800">
+                        <img src="https://picsum.photos/id/251/600/400" class="w-full h-full object-cover group-hover:scale-110 transition">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="heading text-2xl mb-2 lang-en">Cloud Suspended</h3>
+                        <h3 class="heading text-2xl mb-2 lang-es hidden">Nube Suspendida</h3>
+                        <p class="text-emerald-400 mb-4">Commission Only</p>
+                        <p id="cloud-desc" class="text-white/70 text-sm lang-en">Floating installation of white anemones, trailing jasmine, and ethereal elements. Weightless beauty.</p>
+                        <p class="text-white/70 text-sm lang-es hidden">Instalación flotante de anémonas blancas, jazmín en cascada y elementos etéreos. Belleza ingrávida.</p>
+                    </div>
+                </div>
+
+                <div class="group bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition duration-700">
+                    <div class="h-80 bg-zinc-800">
+                        <img src="https://picsum.photos/id/180/600/400" class="w-full h-full object-cover group-hover:scale-110 transition">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="heading text-2xl mb-2 lang-en">Golden Reverie</h3>
+                        <h3 class="heading text-2xl mb-2 lang-es hidden">Ensoñación Dorada</h3>
+                        <p class="text-emerald-400 mb-4">$6,500 – $18,000</p>
+                        <p id="golden-desc" class="text-white/70 text-sm lang-en">Rare golden proteas, orchids, and preserved elements in sculptural harmony.</p>
+                        <p class="text-white/70 text-sm lang-es hidden">Proteas doradas raras, orquídeas y elementos preservados en armonía escultórica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section id="philosophy" class="py-28 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 id="philosophy-title" class="heading text-6xl mb-12">The Philosophy</h2>
+            <div class="max-w-2xl mx-auto text-xl text-white/80 space-y-10">
+                <p id="philo-p1">We do not mass-produce beauty.<br>Every stem is chosen with obsessive care.</p>
+                <p id="philo-p2">Each arrangement is a private conversation between nature’s rarest offerings and Ana’s uncompromising vision.</p>
+                <p id="philo-quote" class="italic text-2xl text-emerald-300">"True luxury is felt in silence — and in bloom."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMISSION -->
+    <section id="commission" class="py-32 bg-gradient-to-b from-black to-zinc-900">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="text-emerald-400 uppercase tracking-[4px] text-sm mb-6">Private & Confidential</div>
+            <h2 id="commission-title" class="heading text-6xl mb-8">Begin Your Commission</h2>
+            <p id="commission-subtitle" class="text-2xl text-white/80 mb-12">For those who seek floral art that matches the rarity of their world.</p>
+            
+            <div class="bg-zinc-900 border border-emerald-400/30 rounded-3xl p-16">
+                <p id="commission-price" class="text-4xl font-light mb-8">Commissions begin at $2,500<br>and ascend according to scale and rarity.</p>
+                <button onclick="alert('Gracias por contactar a Ana Narciso. Un enlace privado ha sido enviado. (Demo)')"
+                        class="w-full bg-emerald-400 hover:bg-emerald-300 text-black py-8 text-xl font-semibold rounded-2xl transition">
+                    <span id="commission-btn">REQUEST A PRIVATE CONSULTATION</span>
+                </button>
+                <p id="commission-note" class="text-xs text-white/50 mt-8">Response within 48 hours • All inquiries treated with absolute discretion</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="heading text-3xl mb-6">ANA NARCISO</div>
+            <p id="footer-text" class="text-white/60 max-w-md mx-auto">Mexico City • Available exclusively by private commission</p>
+            <p class="text-xs text-white/40 mt-12">© 2026 Ana Narciso Atelier. All creations are unique and protected.</p>
+        </div>
+    </footer>
 
     <script>
         function switchLanguage(lang) {
-            // Toggle active button
+            // Toggle buttons
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-es').classList.toggle('active', lang === 'es');
 
+            // Toggle nav links
+            document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang === 'es'));
+            document.querySelectorAll('.lang-es').forEach(el => el.classList.toggle('hidden', lang === 'en'));
+
             if (lang === 'es') {
-                // Spanish translations
+                // HERO
                 document.getElementById('hero-location').textContent = "CIUDAD DE MÉXICO • SOLO POR COMISIÓN PRIVADA";
                 document.getElementById('hero-title').innerHTML = `ARTE VIVO<br>PARA LOS POCOS`;
                 document.getElementById('hero-subtitle').textContent = "Ana Narciso crea obras maestras florales solicitadas por billonarios y visionarios en todo el mundo.";
@@ -116,12 +214,34 @@
                 document.getElementById('hero-btn2').textContent = "ENTRAR AL ATELIER";
                 document.getElementById('hero-note').textContent = "No te dejes engañar por las apariencias. La verdadera maestría es silenciosa.";
 
+                // STORY
                 document.getElementById('story-title').textContent = "Una fuerza silenciosa en el mundo del arte floral.";
                 document.getElementById('story-p1').textContent = "Durante más de 15 años, Ana Narciso ha trabajado desde un atelier discreto en Ciudad de México, transformando botánicos raros en arte vivo escultórico.";
                 document.getElementById('story-p2').textContent = "Sus creaciones han sido encargadas en privado por billonarios, influyentes y aquellos que entienden que las declaraciones más poderosas se hacen con sutileza y maestría.";
                 document.getElementById('story-quote').innerHTML = `"Ana no decora espacios — los transforma en santuarios privados." — Un coleccionista de largo tiempo`;
+
+                // CREATIONS
+                document.getElementById('creations-title').textContent = "Creaciones Signature";
+                document.getElementById('creations-subtitle').textContent = "Únicas. Nunca repetidas.";
+
+                // PHILOSOPHY
+                document.getElementById('philosophy-title').textContent = "La Filosofía";
+                document.getElementById('philo-p1').innerHTML = `No producimos belleza en masa.<br>Cada tallo se elige con cuidado obsesivo.`;
+                document.getElementById('philo-p2').textContent = "Cada arreglo es una conversación privada entre las ofrendas más raras de la naturaleza y la visión inquebrantable de Ana.";
+                document.getElementById('philo-quote').textContent = `"El verdadero lujo se siente en silencio — y en flor."`;
+
+                // COMMISSION
+                document.getElementById('commission-title').textContent = "Inicia Tu Comisión";
+                document.getElementById('commission-subtitle').textContent = "Para quienes buscan arte floral que iguale la rareza de su mundo.";
+                document.getElementById('commission-price').innerHTML = `Las comisiones comienzan en $2,500<br>y ascienden según escala y rareza.`;
+                document.getElementById('commission-btn').textContent = "SOLICITAR CONSULTA PRIVADA";
+                document.getElementById('commission-note').textContent = "Respuesta en 48 horas • Todas las consultas se tratan con absoluta discreción";
+
+                // FOOTER
+                document.getElementById('footer-text').textContent = "Ciudad de México • Disponible exclusivamente por comisión privada";
+
             } else {
-                // English
+                // Reset to English
                 document.getElementById('hero-location').textContent = "MEXICO CITY • BY PRIVATE COMMISSION ONLY";
                 document.getElementById('hero-title').innerHTML = `LIVING ART<br>FOR THE FEW`;
                 document.getElementById('hero-subtitle').textContent = "Ana Narciso creates floral masterpieces requested by billionaires and visionaries worldwide.";
@@ -133,10 +253,26 @@
                 document.getElementById('story-p1').textContent = "For over 15 years, Ana Narciso has worked from a discreet atelier in Mexico City, transforming rare botanicals into sculptural living art.";
                 document.getElementById('story-p2').textContent = "Her creations have been privately commissioned by billionaires, influential tastemakers, and those who understand that the most powerful statements are made through subtlety and mastery.";
                 document.getElementById('story-quote').innerHTML = `"Ana doesn’t decorate spaces — she transforms them into private sanctuaries." — A long-time collector`;
+
+                document.getElementById('creations-title').textContent = "Signature Creations";
+                document.getElementById('creations-subtitle').textContent = "One-of-a-kind. Never repeated.";
+
+                document.getElementById('philosophy-title').textContent = "The Philosophy";
+                document.getElementById('philo-p1').innerHTML = `We do not mass-produce beauty.<br>Every stem is chosen with obsessive care.`;
+                document.getElementById('philo-p2').textContent = "Each arrangement is a private conversation between nature’s rarest offerings and Ana’s uncompromising vision.";
+                document.getElementById('philo-quote').textContent = `"True luxury is felt in silence — and in bloom."`;
+
+                document.getElementById('commission-title').textContent = "Begin Your Commission";
+                document.getElementById('commission-subtitle').textContent = "For those who seek floral art that matches the rarity of their world.";
+                document.getElementById('commission-price').innerHTML = `Commissions begin at $2,500<br>and ascend according to scale and rarity.`;
+                document.getElementById('commission-btn').textContent = "REQUEST A PRIVATE CONSULTATION";
+                document.getElementById('commission-note').textContent = "Response within 48 hours • All inquiries treated with absolute discretion";
+
+                document.getElementById('footer-text').textContent = "Mexico City • Available exclusively by private commission";
             }
         }
 
-        // Default to English
+        // Initialize in English
         window.onload = () => switchLanguage('en');
     </script>
 </body>
